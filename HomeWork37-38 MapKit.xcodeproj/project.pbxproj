@@ -15,6 +15,17 @@
 		AC12375D1D116731000E24ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC12375B1D116731000E24ED /* LaunchScreen.storyboard */; };
 		AC1237681D116731000E24ED /* HomeWork37_38_MapKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1237671D116731000E24ED /* HomeWork37_38_MapKitTests.m */; };
 		AC1237731D116731000E24ED /* HomeWork37_38_MapKitUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1237721D116731000E24ED /* HomeWork37_38_MapKitUITests.m */; };
+		AC1237811D1167F8000E24ED /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC1237801D1167F8000E24ED /* MapKit.framework */; };
+		AC1237861D11695C000E24ED /* OVMapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1237831D11695C000E24ED /* OVMapAnnotation.m */; };
+		AC1237871D11695C000E24ED /* OVStudent.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1237851D11695C000E24ED /* OVStudent.m */; };
+		AC12378F1D11A6CF000E24ED /* Untitled1.png in Resources */ = {isa = PBXBuildFile; fileRef = AC1237891D11A6CF000E24ED /* Untitled1.png */; };
+		AC1237901D11A6CF000E24ED /* Untitled2.png in Resources */ = {isa = PBXBuildFile; fileRef = AC12378A1D11A6CF000E24ED /* Untitled2.png */; };
+		AC1237911D11A6CF000E24ED /* Untitled3.png in Resources */ = {isa = PBXBuildFile; fileRef = AC12378B1D11A6CF000E24ED /* Untitled3.png */; };
+		AC1237921D11A6CF000E24ED /* Untitled4.png in Resources */ = {isa = PBXBuildFile; fileRef = AC12378C1D11A6CF000E24ED /* Untitled4.png */; };
+		AC1237931D11A6CF000E24ED /* Untitled5.png in Resources */ = {isa = PBXBuildFile; fileRef = AC12378D1D11A6CF000E24ED /* Untitled5.png */; };
+		AC1237941D11A6CF000E24ED /* Untitled6.png in Resources */ = {isa = PBXBuildFile; fileRef = AC12378E1D11A6CF000E24ED /* Untitled6.png */; };
+		AC5EECDC1D12D910003E6325 /* UIView+MKAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5EECDB1D12D910003E6325 /* UIView+MKAnnotationView.m */; };
+		AC5EECE21D15725E003E6325 /* OVCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5EECE11D15725E003E6325 /* OVCircle.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +62,21 @@
 		AC12376E1D116731000E24ED /* HomeWork37-38 MapKitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HomeWork37-38 MapKitUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC1237721D116731000E24ED /* HomeWork37_38_MapKitUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeWork37_38_MapKitUITests.m; sourceTree = "<group>"; };
 		AC1237741D116731000E24ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC1237801D1167F8000E24ED /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		AC1237821D11695C000E24ED /* OVMapAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OVMapAnnotation.h; sourceTree = "<group>"; };
+		AC1237831D11695C000E24ED /* OVMapAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OVMapAnnotation.m; sourceTree = "<group>"; };
+		AC1237841D11695C000E24ED /* OVStudent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OVStudent.h; sourceTree = "<group>"; };
+		AC1237851D11695C000E24ED /* OVStudent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OVStudent.m; sourceTree = "<group>"; };
+		AC1237891D11A6CF000E24ED /* Untitled1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Untitled1.png; sourceTree = "<group>"; };
+		AC12378A1D11A6CF000E24ED /* Untitled2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Untitled2.png; sourceTree = "<group>"; };
+		AC12378B1D11A6CF000E24ED /* Untitled3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Untitled3.png; sourceTree = "<group>"; };
+		AC12378C1D11A6CF000E24ED /* Untitled4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Untitled4.png; sourceTree = "<group>"; };
+		AC12378D1D11A6CF000E24ED /* Untitled5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Untitled5.png; sourceTree = "<group>"; };
+		AC12378E1D11A6CF000E24ED /* Untitled6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Untitled6.png; sourceTree = "<group>"; };
+		AC5EECDA1D12D910003E6325 /* UIView+MKAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MKAnnotationView.h"; sourceTree = "<group>"; };
+		AC5EECDB1D12D910003E6325 /* UIView+MKAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MKAnnotationView.m"; sourceTree = "<group>"; };
+		AC5EECE01D15725E003E6325 /* OVCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OVCircle.h; sourceTree = "<group>"; };
+		AC5EECE11D15725E003E6325 /* OVCircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OVCircle.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC1237811D1167F8000E24ED /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +112,7 @@
 				AC1237661D116731000E24ED /* HomeWork37-38 MapKitTests */,
 				AC1237711D116731000E24ED /* HomeWork37-38 MapKitUITests */,
 				AC12374B1D116731000E24ED /* Products */,
+				AC1237801D1167F8000E24ED /* MapKit.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,12 +131,21 @@
 			children = (
 				AC1237501D116731000E24ED /* AppDelegate.h */,
 				AC1237511D116731000E24ED /* AppDelegate.m */,
+				AC5EECDA1D12D910003E6325 /* UIView+MKAnnotationView.h */,
+				AC5EECDB1D12D910003E6325 /* UIView+MKAnnotationView.m */,
+				AC5EECE01D15725E003E6325 /* OVCircle.h */,
+				AC5EECE11D15725E003E6325 /* OVCircle.m */,
+				AC1237821D11695C000E24ED /* OVMapAnnotation.h */,
+				AC1237831D11695C000E24ED /* OVMapAnnotation.m */,
+				AC1237841D11695C000E24ED /* OVStudent.h */,
+				AC1237851D11695C000E24ED /* OVStudent.m */,
 				AC1237531D116731000E24ED /* ViewController.h */,
 				AC1237541D116731000E24ED /* ViewController.m */,
 				AC1237561D116731000E24ED /* Main.storyboard */,
 				AC1237591D116731000E24ED /* Assets.xcassets */,
 				AC12375B1D116731000E24ED /* LaunchScreen.storyboard */,
 				AC12375E1D116731000E24ED /* Info.plist */,
+				AC1237881D11A6C5000E24ED /* Image */,
 				AC12374D1D116731000E24ED /* Supporting Files */,
 			);
 			path = "HomeWork37-38 MapKit";
@@ -138,6 +175,19 @@
 				AC1237741D116731000E24ED /* Info.plist */,
 			);
 			path = "HomeWork37-38 MapKitUITests";
+			sourceTree = "<group>";
+		};
+		AC1237881D11A6C5000E24ED /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				AC1237891D11A6CF000E24ED /* Untitled1.png */,
+				AC12378A1D11A6CF000E24ED /* Untitled2.png */,
+				AC12378B1D11A6CF000E24ED /* Untitled3.png */,
+				AC12378C1D11A6CF000E24ED /* Untitled4.png */,
+				AC12378D1D11A6CF000E24ED /* Untitled5.png */,
+				AC12378E1D11A6CF000E24ED /* Untitled6.png */,
+			);
+			name = Image;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,8 +296,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC1237901D11A6CF000E24ED /* Untitled2.png in Resources */,
 				AC12375D1D116731000E24ED /* LaunchScreen.storyboard in Resources */,
 				AC12375A1D116731000E24ED /* Assets.xcassets in Resources */,
+				AC1237921D11A6CF000E24ED /* Untitled4.png in Resources */,
+				AC12378F1D11A6CF000E24ED /* Untitled1.png in Resources */,
+				AC1237911D11A6CF000E24ED /* Untitled3.png in Resources */,
+				AC1237931D11A6CF000E24ED /* Untitled5.png in Resources */,
+				AC1237941D11A6CF000E24ED /* Untitled6.png in Resources */,
 				AC1237581D116731000E24ED /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,6 +331,10 @@
 			files = (
 				AC1237551D116731000E24ED /* ViewController.m in Sources */,
 				AC1237521D116731000E24ED /* AppDelegate.m in Sources */,
+				AC5EECDC1D12D910003E6325 /* UIView+MKAnnotationView.m in Sources */,
+				AC1237871D11695C000E24ED /* OVStudent.m in Sources */,
+				AC5EECE21D15725E003E6325 /* OVCircle.m in Sources */,
+				AC1237861D11695C000E24ED /* OVMapAnnotation.m in Sources */,
 				AC12374F1D116731000E24ED /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -501,6 +561,7 @@
 				AC1237791D116731000E24ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AC12377A1D116731000E24ED /* Build configuration list for PBXNativeTarget "HomeWork37-38 MapKitTests" */ = {
 			isa = XCConfigurationList;
@@ -509,6 +570,7 @@
 				AC12377C1D116731000E24ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AC12377D1D116731000E24ED /* Build configuration list for PBXNativeTarget "HomeWork37-38 MapKitUITests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +579,7 @@
 				AC12377F1D116731000E24ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
