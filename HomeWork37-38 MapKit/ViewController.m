@@ -32,8 +32,20 @@ typedef enum : NSUInteger {
     OVCircleNameRed,
     OVCircleNameOrange,
     OVCircleNameGreen
-    
-} OVCircleName;
+}   OVCircleName;
+
+static CLLocationDistance redRadius = 15000.0;
+static CLLocationDistance orangeRadius = 10000.0;
+static CLLocationDistance greenRadius = 5000.0;
+
+static NSString *redCircleName = @"Red Circle";
+static NSString *orangeCircleName = @"Orange Circle";
+static NSString *greenCircleName = @"Green Circle";
+
+static NSString *redCircleOverlayTitle = @"redCircleOverlay";
+static NSString *orangeCircleOverlayTitle = @"orangeCircleOverlay";
+static NSString *greenCircleOverlayTitle = @"greenCircleOverlay";
+
 
 @implementation ViewController
 
@@ -41,17 +53,20 @@ typedef enum : NSUInteger {
     [super viewDidLoad];
     
     
-    UIBarButtonItem *zoomButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch
-                                                                          target:self
-                                                                          action:@selector(actionZoom:)];
+    UIBarButtonItem *zoomButton =
+    [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch
+                                                  target:self
+                                                  action:@selector(actionZoom:)];
+
+    UIBarButtonItem *flexibleSpace =
+    [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace
+                                                  target:self
+                                                  action:nil];
     
-    UIBarButtonItem *flexibleSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace
-                                                                                   target:self
-                                                                                   action:nil];
-    
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
-                                                                                target:self
-                                                                                action:@selector(actionAdd:)];
+    UIBarButtonItem *addButton =
+    [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
+                                                  target:self
+                                                  action:@selector(actionAdd:)];
     
     self.navigationItem.rightBarButtonItems = @[flexibleSpace, addButton, zoomButton];
     
@@ -75,36 +90,61 @@ typedef enum : NSUInteger {
 
 #pragma mark - Private Methods
 
+- (void)addAnnotationWithTitle:(NSString *)title
+                      subtitle:(NSString *)subtitle
+                    coordinate:(CLLocationCoordinate2D)coordinate
+                    andStudent:(OVStudent *)student {
+    
+    OVMapAnnotation *annotation = [[OVMapAnnotation alloc] init];
+    
+    annotation.title = title;
+    annotation.subtitle = subtitle;
+    annotation.coordinate = coordinate;
+    annotation.student = student;
+    
+    [self.mapView addAnnotation:annotation];
+    
+    if (!student) {
+        [self addOverlaysWithMeetAnnotation:annotation];
+    }
+}
+
 - (void)addOverlaysWithMeetAnnotation:(OVMapAnnotation *)meetAnnotation {
     
     NSString *title = @"Meeting Point";
     self.meetCoordinate = meetAnnotation.coordinate;
     
-    CLLocationDistance redRadius = 15000.0;
-    CLLocationDistance orangeRadius = 10000.0;
-    CLLocationDistance greenRadius = 5000.0;
+    // removing overlays from previous point and setting to them to new one
+    MKCircle *redCircleOverlay =
+    [MKCircle circleWithCenterCoordinate:meetAnnotation.coordinate
+                                  radius:redRadius];
     
-    MKCircle *redCircleOverlay = [MKCircle circleWithCenterCoordinate:meetAnnotation.coordinate radius:redRadius];
-    MKCircle *orangeCircleOverlay = [MKCircle circleWithCenterCoordinate:meetAnnotation.coordinate radius:orangeRadius];
-    MKCircle *greenCircleOverlay = [MKCircle circleWithCenterCoordinate:meetAnnotation.coordinate radius:greenRadius];
+    MKCircle *orangeCircleOverlay =
+    [MKCircle circleWithCenterCoordinate:meetAnnotation.coordinate
+                                  radius:orangeRadius];
+    
+    MKCircle *greenCircleOverlay =
+    [MKCircle circleWithCenterCoordinate:meetAnnotation.coordinate
+                                  radius:greenRadius];
     
     for (id <MKOverlay>overlay in self.mapView.overlays) {
         [self.mapView removeOverlay:overlay];
     }
     
-    [redCircleOverlay setTitle:@"redCircleOverlay"];
-    [orangeCircleOverlay setTitle:@"orangeCircleOverlay"];
-    [greenCircleOverlay setTitle:@"greenCircleOverlay"];
+    [redCircleOverlay setTitle:redCircleOverlayTitle];
+    [orangeCircleOverlay setTitle:orangeCircleOverlayTitle];
+    [greenCircleOverlay setTitle:greenCircleOverlayTitle];
     
-    [self.mapView addOverlays:@[greenCircleOverlay, orangeCircleOverlay, redCircleOverlay] level:MKOverlayLevelAboveRoads];
+    [self.mapView addOverlays:@[greenCircleOverlay, orangeCircleOverlay, redCircleOverlay]
+                        level:MKOverlayLevelAboveRoads];
     
-    OVCircle *redCircleArray = [[OVCircle alloc] init];
-    OVCircle *orangeCircleArray = [[OVCircle alloc] init];
-    OVCircle *greenCircleArray = [[OVCircle alloc] init];
+    OVCircle *redCircleArray = [OVCircle new];
+    OVCircle *orangeCircleArray = [OVCircle new];
+    OVCircle *greenCircleArray = [OVCircle new];
     
-    redCircleArray.name = @"Red Circle";
-    orangeCircleArray.name = @"Orange Circle";
-    greenCircleArray.name = @"Green Circle";
+    redCircleArray.name = redCircleName;
+    orangeCircleArray.name = orangeCircleName;
+    greenCircleArray.name = greenCircleName;
     
     redCircleArray.itemsArray = [NSMutableArray array];
     orangeCircleArray.itemsArray = [NSMutableArray array];
@@ -112,6 +152,7 @@ typedef enum : NSUInteger {
     
     NSUInteger checkCounter = 0;
     
+    // searching for friends within overlays
     for (OVMapAnnotation *annotation in self.mapView.annotations) {
         
         MKMapPoint meetPoint = MKMapPointForCoordinate(meetAnnotation.coordinate);
@@ -146,24 +187,6 @@ typedef enum : NSUInteger {
         self.circlesArray = @[redCircleArray, orangeCircleArray, greenCircleArray];
         [self showFriendsDistancePopup];
 
-    }
-}
-
-- (void)addAnnotationWithTitle:(NSString *)title
-                      subtitle:(NSString *)subtitle
-                    coordinate:(CLLocationCoordinate2D)coordinate andStudents:(OVStudent *)student {
-    
-    OVMapAnnotation *annotation = [[OVMapAnnotation alloc] init];
-    
-    annotation.title = title;
-    annotation.subtitle = subtitle;
-    annotation.coordinate = coordinate;
-    annotation.student = student;
-    
-    [self.mapView addAnnotation:annotation];
-    
-    if (!student) {
-        [self addOverlaysWithMeetAnnotation:annotation];
     }
 }
 
@@ -236,7 +259,7 @@ typedef enum : NSUInteger {
 }
 
 - (BOOL)randomBoolWithYesPercentage:(NSUInteger)percentage {
-    return arc4random_uniform(100) < percentage;
+    return arc4random_uniform(101) < percentage;
 }
 
 - (void)studentsArrayInitWithCoordinates {
@@ -257,7 +280,7 @@ typedef enum : NSUInteger {
         [dateFormatter setDateFormat:@"dd/MM/yyyy"];
         NSString *subtitle = [dateFormatter stringFromDate:student.dateOfBirth];
    
-        [self addAnnotationWithTitle:title subtitle:subtitle coordinate:student.coordinate andStudents:student];
+        [self addAnnotationWithTitle:title subtitle:subtitle coordinate:student.coordinate andStudent:student];
     }
     
     self.studentsArray = [NSArray arrayWithArray:students];
@@ -271,11 +294,17 @@ typedef enum : NSUInteger {
     NSString *subtitle = @"Let's go for a walk!";
     CLLocationCoordinate2D coordinate = self.mapView.region.center;
     
-    [self addAnnotationWithTitle:title subtitle:subtitle coordinate:coordinate andStudents:nil];
+    [self addAnnotationWithTitle:title subtitle:subtitle coordinate:coordinate andStudent:nil];
+}
+
+- (void)actionCloseInfo:(UIBarButtonItem *)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)actionDirection:(UIBarButtonItem *)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
+    
+    // setting directions from random students
     
     if ([self.directions isCalculating]) {
         [self.directions cancel];
@@ -293,28 +322,30 @@ typedef enum : NSUInteger {
         
         for (OVMapAnnotation *annotation in circle.itemsArray) {
             
-            if ([circle.name isEqualToString:@"Red Circle"]) {
+            if ([circle.name isEqualToString:redCircleName]) {
                 isGoing = [self randomBoolWithYesPercentage:10];
                 
-            } else if ([circle.name isEqualToString:@"Orange Circle"]) {
+            } else if ([circle.name isEqualToString:orangeCircleName]) {
                 isGoing = [self randomBoolWithYesPercentage:50];
                 
-            } else if ([circle.name isEqualToString:@"Green Circle"]) {
+            } else if ([circle.name isEqualToString:greenCircleName]) {
                 isGoing = [self randomBoolWithYesPercentage:90];
             }
-            
-            NSLog(@"isGoing = %@", isGoing ? @"YES" : @"NO");
             
             if (isGoing) {
                 MKDirectionsRequest *request = [[MKDirectionsRequest alloc] init];
                 
-                MKPlacemark *sourcePlacemark = [[MKPlacemark alloc] initWithCoordinate:annotation.coordinate
-                                                                     addressDictionary:nil];
-                MKMapItem *sourceMapItem = [[MKMapItem alloc] initWithPlacemark:sourcePlacemark];
+                MKPlacemark *sourcePlacemark =
+                [[MKPlacemark alloc] initWithCoordinate:annotation.coordinate
+                                      addressDictionary:nil];
+                MKMapItem *sourceMapItem =
+                [[MKMapItem alloc] initWithPlacemark:sourcePlacemark];
                 
-                MKPlacemark *placemark = [[MKPlacemark alloc] initWithCoordinate:self.meetCoordinate
-                                                               addressDictionary:nil];
-                MKMapItem *destinationMapItem = [[MKMapItem alloc] initWithPlacemark:placemark];
+                MKPlacemark *placemark =
+                [[MKPlacemark alloc] initWithCoordinate:self.meetCoordinate
+                                      addressDictionary:nil];
+                MKMapItem *destinationMapItem =
+                [[MKMapItem alloc] initWithPlacemark:placemark];
                
                 request.source = sourceMapItem;
                 request.destination = destinationMapItem;
@@ -323,12 +354,17 @@ typedef enum : NSUInteger {
                 
                 self.directions = [[MKDirections alloc] initWithRequest:request];
                 
-                [self.directions calculateDirectionsWithCompletionHandler:^(MKDirectionsResponse * _Nullable response, NSError * _Nullable error) {
+                [self.directions
+                 calculateDirectionsWithCompletionHandler:
+                 ^(MKDirectionsResponse * _Nullable response, NSError * _Nullable error) {
+                     
                     if (error) {
-                        [self showAlertWithTitle:@"Directions Error" andMessage:[error localizedDescription]];
+                        [self showAlertWithTitle:@"Directions Error"
+                                      andMessage:[error localizedDescription]];
                         
                     } else if ([response.routes count] == 0) {
-                        [self showAlertWithTitle:@"Directions Error" andMessage:@"No routes found"];
+                        [self showAlertWithTitle:@"Directions Error"
+                                      andMessage:@"No routes found"];
                         
                     } else {
                         
@@ -338,16 +374,13 @@ typedef enum : NSUInteger {
                             [array addObject:route.polyline];
                         }
                         
-                        [self.mapView addOverlays:array level:MKOverlayLevelAboveRoads];
+                        [self.mapView addOverlays:array
+                                            level:MKOverlayLevelAboveRoads];
                     }
                 }];
             }
         }
     }
-}
-
-- (void)actionCloseInfo:(UIBarButtonItem *)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)actionInfo:(UIButton *)sender {
@@ -356,10 +389,13 @@ typedef enum : NSUInteger {
     
     tableController.preferredContentSize = CGSizeMake(250, 4 * 44);
     
-    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:tableController];
+    UINavigationController *navController =
+    [[UINavigationController alloc] initWithRootViewController:tableController];
     navController.modalPresentationStyle = UIModalPresentationPopover;
     
-    UITableView *tableView = [[UITableView alloc] initWithFrame:tableController.view.frame style:UITableViewStyleGrouped];
+    UITableView *tableView =
+    [[UITableView alloc] initWithFrame:tableController.view.frame
+                                 style:UITableViewStyleGrouped];
     
     tableView.delegate = self;
     tableView.dataSource = self;
@@ -368,9 +404,10 @@ typedef enum : NSUInteger {
     tableController.tableView = tableView;
     tableController.navigationItem.title = @"User Info";
     
-    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone
-                                                                                target:self
-                                                                                action:@selector(actionCloseInfo:)];
+    UIBarButtonItem *backButton =
+    [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone
+                                                  target:self
+                                                  action:@selector(actionCloseInfo:)];
     backButton.style = UIBarButtonItemStylePlain;
     tableController.navigationItem.rightBarButtonItem = backButton;
     
@@ -397,36 +434,39 @@ typedef enum : NSUInteger {
         [self.geoCoder cancelGeocode];
     }
     
-    CLLocation *location = [[CLLocation alloc] initWithLatitude:student.coordinate.latitude longitude:student.coordinate.longitude];
+    CLLocation *location = [[CLLocation alloc] initWithLatitude:student.coordinate.latitude
+                                                      longitude:student.coordinate.longitude];
     
-    [self.geoCoder reverseGeocodeLocation:location
-                        completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
+    [self.geoCoder
+     reverseGeocodeLocation:location
+        completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
                             
-                            NSString *message = nil;
-                            
-                            if (error) {
-                                NSLog(@"%@", [error localizedDescription]);
-                                
-                            } else  {
-                                
-                                if ([placemarks count] > 0) {
-                                    CLPlacemark *placemark = [placemarks firstObject];
-                                    message = [NSString stringWithFormat:@"%@, %@", placemark.country, placemark.locality];
-                                    
-                                } else {
-                                    message = @"Not Found";
-                                }
-                            }
-                            self.address = message;
-                            
-                        }];
+        NSString *message = nil;
+        
+        if (error) {
+            NSLog(@"%@", [error localizedDescription]);
+            
+        } else  {
+            
+            if ([placemarks count] > 0) {
+                CLPlacemark *placemark = [placemarks firstObject];
+                message = [NSString stringWithFormat:@"%@, %@", placemark.country, placemark.locality];
+                
+            } else {
+                message = @"Not Found";
+            }
+        }
+        self.address = message;
+        
+    }];
     
     
     self.currentStudent = student;
 }
 
-
 - (void)actionZoom:(UIBarButtonItem *)sender {
+    
+    // zoom map to rect able to show all our students points
     
     MKMapRect zoomRect = MKMapRectNull;
     
@@ -529,8 +569,6 @@ typedef enum : NSUInteger {
             if (self.address) {
                 text = self.address;
                 
-            } else {
-                text = @"NIL";
             }
         }
         
@@ -640,13 +678,13 @@ typedef enum : NSUInteger {
         
         MKCircleRenderer *circleR = [[MKCircleRenderer alloc] initWithCircle:(MKCircle *)overlay];
 
-        if ([[overlay title] isEqualToString:@"redCircleOverlay"]) {
+        if ([[overlay title] isEqualToString:redCircleOverlayTitle]) {
             circleR.fillColor = [[UIColor greenColor] colorWithAlphaComponent:0.1];
             
-        } else if ([[overlay title] isEqualToString:@"orangeCircleOverlay"]) {
+        } else if ([[overlay title] isEqualToString:orangeCircleOverlayTitle]) {
             circleR.fillColor = [[UIColor greenColor] colorWithAlphaComponent:0.3];
             
-        } else if ([[overlay title] isEqualToString:@"greenCircleOverlay"]) {
+        } else if ([[overlay title] isEqualToString:greenCircleOverlayTitle]) {
             circleR.fillColor = [[UIColor greenColor] colorWithAlphaComponent:0.6];
             
         }

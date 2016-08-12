@@ -10,6 +10,7 @@
 
 @interface OVCircle : NSObject
 
+// class for metting area
 @property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic) NSMutableArray *itemsArray;
 

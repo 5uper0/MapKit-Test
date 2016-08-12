@@ -11,6 +11,7 @@
 
 @interface UIView (MKAnnotationView)
 
+// use this method to find UIView's object superView of MKAnnotationView subclass
 - (MKAnnotationView *)superAnnotationView;
 
 @end
