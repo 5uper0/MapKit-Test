@@ -34,17 +34,17 @@ typedef enum : NSUInteger {
     OVCircleNameGreen
 }   OVCircleName;
 
-static CLLocationDistance redRadius = 15000.0;
-static CLLocationDistance orangeRadius = 10000.0;
-static CLLocationDistance greenRadius = 5000.0;
+static const CLLocationDistance redRadius = 15000.0;
+static const CLLocationDistance orangeRadius = 10000.0;
+static const CLLocationDistance greenRadius = 5000.0;
 
-static NSString *redCircleName = @"Red Circle";
-static NSString *orangeCircleName = @"Orange Circle";
-static NSString *greenCircleName = @"Green Circle";
+static const NSString *redCircleName = @"Red Circle";
+static const NSString *orangeCircleName = @"Orange Circle";
+static const NSString *greenCircleName = @"Green Circle";
 
-static NSString *redCircleOverlayTitle = @"redCircleOverlay";
-static NSString *orangeCircleOverlayTitle = @"orangeCircleOverlay";
-static NSString *greenCircleOverlayTitle = @"greenCircleOverlay";
+static const NSString *redCircleOverlayTitle = @"redCircleOverlay";
+static const NSString *orangeCircleOverlayTitle = @"orangeCircleOverlay";
+static const NSString *greenCircleOverlayTitle = @"greenCircleOverlay";
 
 
 @implementation ViewController
