@@ -34,18 +34,19 @@ typedef enum : NSUInteger {
     OVCircleNameGreen
 }   OVCircleName;
 
-static const CLLocationDistance redRadius = 15000.0;
-static const CLLocationDistance orangeRadius = 10000.0;
-static const CLLocationDistance greenRadius = 5000.0;
+static CLLocationDistance redRadius = 15000.0;
+static CLLocationDistance orangeRadius = 10000.0;
+static CLLocationDistance greenRadius = 5000.0;
 
-static const NSString *redCircleName = @"Red Circle";
-static const NSString *orangeCircleName = @"Orange Circle";
-static const NSString *greenCircleName = @"Green Circle";
+static NSString *redCircleName = @"Red Circle";
+static NSString *orangeCircleName = @"Orange Circle";
+static NSString *greenCircleName = @"Green Circle";
 
-static const NSString *redCircleOverlayTitle = @"redCircleOverlay";
-static const NSString *orangeCircleOverlayTitle = @"orangeCircleOverlay";
-static const NSString *greenCircleOverlayTitle = @"greenCircleOverlay";
+static NSString *redCircleOverlayTitle = @"redCircleOverlay";
+static NSString *orangeCircleOverlayTitle = @"orangeCircleOverlay";
+static NSString *greenCircleOverlayTitle = @"greenCircleOverlay";
 
+static NSUInteger studentsCount = 30;
 
 @implementation ViewController
 
@@ -265,7 +266,6 @@ static const NSString *greenCircleOverlayTitle = @"greenCircleOverlay";
 - (void)studentsArrayInitWithCoordinates {
     
     NSMutableArray *students = [NSMutableArray array];
-    NSUInteger studentsCount = 30;
     
     for (int i = 0; i < studentsCount; i++) {
         
@@ -627,10 +627,10 @@ static const NSString *greenCircleOverlayTitle = @"greenCircleOverlay";
             aView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:identifier];
             
             if (student.isMale) {
-                aView.image = [UIImage imageNamed:@"Untitled1.png"];
+                aView.image = [UIImage imageNamed:@"Male.png"];
                 
             } else {
-                aView.image = [UIImage imageNamed:@"Untitled4.png"];
+                aView.image = [UIImage imageNamed:@"Female.png"];
             }
             
             aView.frame = CGRectMake(0, 0, 40, 50);
@@ -654,7 +654,7 @@ static const NSString *greenCircleOverlayTitle = @"greenCircleOverlay";
         if (!aView) {
             aView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:meetIdentifier];
             
-            aView.image = [UIImage imageNamed:@"Untitled5.png"];
+            aView.image = [UIImage imageNamed:@"Meeting.png"];
 
             aView.frame = CGRectMake(0, 0, 40, 50);
             aView.canShowCallout = YES;

@@ -18,12 +18,9 @@
 		AC1237811D1167F8000E24ED /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC1237801D1167F8000E24ED /* MapKit.framework */; };
 		AC1237861D11695C000E24ED /* OVMapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1237831D11695C000E24ED /* OVMapAnnotation.m */; };
 		AC1237871D11695C000E24ED /* OVStudent.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1237851D11695C000E24ED /* OVStudent.m */; };
-		AC12378F1D11A6CF000E24ED /* Untitled1.png in Resources */ = {isa = PBXBuildFile; fileRef = AC1237891D11A6CF000E24ED /* Untitled1.png */; };
-		AC1237901D11A6CF000E24ED /* Untitled2.png in Resources */ = {isa = PBXBuildFile; fileRef = AC12378A1D11A6CF000E24ED /* Untitled2.png */; };
-		AC1237911D11A6CF000E24ED /* Untitled3.png in Resources */ = {isa = PBXBuildFile; fileRef = AC12378B1D11A6CF000E24ED /* Untitled3.png */; };
-		AC1237921D11A6CF000E24ED /* Untitled4.png in Resources */ = {isa = PBXBuildFile; fileRef = AC12378C1D11A6CF000E24ED /* Untitled4.png */; };
-		AC1237931D11A6CF000E24ED /* Untitled5.png in Resources */ = {isa = PBXBuildFile; fileRef = AC12378D1D11A6CF000E24ED /* Untitled5.png */; };
-		AC1237941D11A6CF000E24ED /* Untitled6.png in Resources */ = {isa = PBXBuildFile; fileRef = AC12378E1D11A6CF000E24ED /* Untitled6.png */; };
+		AC17D4EF1D7DEED80000F63E /* Female.png in Resources */ = {isa = PBXBuildFile; fileRef = AC17D4E91D7DEED80000F63E /* Female.png */; };
+		AC17D4F11D7DEED80000F63E /* Male.png in Resources */ = {isa = PBXBuildFile; fileRef = AC17D4EB1D7DEED80000F63E /* Male.png */; };
+		AC17D4F41D7DEFFC0000F63E /* Meeting.png in Resources */ = {isa = PBXBuildFile; fileRef = AC17D4F31D7DEFFC0000F63E /* Meeting.png */; };
 		AC5EECDC1D12D910003E6325 /* UIView+MKAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5EECDB1D12D910003E6325 /* UIView+MKAnnotationView.m */; };
 		AC5EECE21D15725E003E6325 /* OVCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5EECE11D15725E003E6325 /* OVCircle.m */; };
 /* End PBXBuildFile section */
@@ -67,12 +64,9 @@
 		AC1237831D11695C000E24ED /* OVMapAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OVMapAnnotation.m; sourceTree = "<group>"; };
 		AC1237841D11695C000E24ED /* OVStudent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OVStudent.h; sourceTree = "<group>"; };
 		AC1237851D11695C000E24ED /* OVStudent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OVStudent.m; sourceTree = "<group>"; };
-		AC1237891D11A6CF000E24ED /* Untitled1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Untitled1.png; sourceTree = "<group>"; };
-		AC12378A1D11A6CF000E24ED /* Untitled2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Untitled2.png; sourceTree = "<group>"; };
-		AC12378B1D11A6CF000E24ED /* Untitled3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Untitled3.png; sourceTree = "<group>"; };
-		AC12378C1D11A6CF000E24ED /* Untitled4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Untitled4.png; sourceTree = "<group>"; };
-		AC12378D1D11A6CF000E24ED /* Untitled5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Untitled5.png; sourceTree = "<group>"; };
-		AC12378E1D11A6CF000E24ED /* Untitled6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Untitled6.png; sourceTree = "<group>"; };
+		AC17D4E91D7DEED80000F63E /* Female.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Female.png; path = Images/Female.png; sourceTree = "<group>"; };
+		AC17D4EB1D7DEED80000F63E /* Male.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Male.png; path = Images/Male.png; sourceTree = "<group>"; };
+		AC17D4F31D7DEFFC0000F63E /* Meeting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Meeting.png; path = Images/Meeting.png; sourceTree = "<group>"; };
 		AC5EECDA1D12D910003E6325 /* UIView+MKAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MKAnnotationView.h"; sourceTree = "<group>"; };
 		AC5EECDB1D12D910003E6325 /* UIView+MKAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MKAnnotationView.m"; sourceTree = "<group>"; };
 		AC5EECE01D15725E003E6325 /* OVCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OVCircle.h; sourceTree = "<group>"; };
@@ -129,23 +123,16 @@
 		AC12374C1D116731000E24ED /* HomeWork37-38 MapKit */ = {
 			isa = PBXGroup;
 			children = (
+				AC1237881D11A6C5000E24ED /* Images */,
+				AC17D4E41D7DEB880000F63E /* Model */,
+				AC17D4E51D7DEBB40000F63E /* View */,
+				AC17D4E61D7DEBBE0000F63E /* Controller */,
 				AC1237501D116731000E24ED /* AppDelegate.h */,
 				AC1237511D116731000E24ED /* AppDelegate.m */,
-				AC5EECDA1D12D910003E6325 /* UIView+MKAnnotationView.h */,
-				AC5EECDB1D12D910003E6325 /* UIView+MKAnnotationView.m */,
-				AC5EECE01D15725E003E6325 /* OVCircle.h */,
-				AC5EECE11D15725E003E6325 /* OVCircle.m */,
-				AC1237821D11695C000E24ED /* OVMapAnnotation.h */,
-				AC1237831D11695C000E24ED /* OVMapAnnotation.m */,
-				AC1237841D11695C000E24ED /* OVStudent.h */,
-				AC1237851D11695C000E24ED /* OVStudent.m */,
-				AC1237531D116731000E24ED /* ViewController.h */,
-				AC1237541D116731000E24ED /* ViewController.m */,
 				AC1237561D116731000E24ED /* Main.storyboard */,
 				AC1237591D116731000E24ED /* Assets.xcassets */,
 				AC12375B1D116731000E24ED /* LaunchScreen.storyboard */,
 				AC12375E1D116731000E24ED /* Info.plist */,
-				AC1237881D11A6C5000E24ED /* Image */,
 				AC12374D1D116731000E24ED /* Supporting Files */,
 			);
 			path = "HomeWork37-38 MapKit";
@@ -177,17 +164,45 @@
 			path = "HomeWork37-38 MapKitUITests";
 			sourceTree = "<group>";
 		};
-		AC1237881D11A6C5000E24ED /* Image */ = {
+		AC1237881D11A6C5000E24ED /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				AC1237891D11A6CF000E24ED /* Untitled1.png */,
-				AC12378A1D11A6CF000E24ED /* Untitled2.png */,
-				AC12378B1D11A6CF000E24ED /* Untitled3.png */,
-				AC12378C1D11A6CF000E24ED /* Untitled4.png */,
-				AC12378D1D11A6CF000E24ED /* Untitled5.png */,
-				AC12378E1D11A6CF000E24ED /* Untitled6.png */,
+				AC17D4E91D7DEED80000F63E /* Female.png */,
+				AC17D4EB1D7DEED80000F63E /* Male.png */,
+				AC17D4F31D7DEFFC0000F63E /* Meeting.png */,
 			);
-			name = Image;
+			name = Images;
+			sourceTree = "<group>";
+		};
+		AC17D4E41D7DEB880000F63E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AC1237821D11695C000E24ED /* OVMapAnnotation.h */,
+				AC1237831D11695C000E24ED /* OVMapAnnotation.m */,
+				AC5EECE01D15725E003E6325 /* OVCircle.h */,
+				AC5EECE11D15725E003E6325 /* OVCircle.m */,
+				AC1237841D11695C000E24ED /* OVStudent.h */,
+				AC1237851D11695C000E24ED /* OVStudent.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		AC17D4E51D7DEBB40000F63E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AC5EECDA1D12D910003E6325 /* UIView+MKAnnotationView.h */,
+				AC5EECDB1D12D910003E6325 /* UIView+MKAnnotationView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		AC17D4E61D7DEBBE0000F63E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AC1237531D116731000E24ED /* ViewController.h */,
+				AC1237541D116731000E24ED /* ViewController.m */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,15 +311,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC1237901D11A6CF000E24ED /* Untitled2.png in Resources */,
 				AC12375D1D116731000E24ED /* LaunchScreen.storyboard in Resources */,
 				AC12375A1D116731000E24ED /* Assets.xcassets in Resources */,
-				AC1237921D11A6CF000E24ED /* Untitled4.png in Resources */,
-				AC12378F1D11A6CF000E24ED /* Untitled1.png in Resources */,
-				AC1237911D11A6CF000E24ED /* Untitled3.png in Resources */,
-				AC1237931D11A6CF000E24ED /* Untitled5.png in Resources */,
-				AC1237941D11A6CF000E24ED /* Untitled6.png in Resources */,
+				AC17D4EF1D7DEED80000F63E /* Female.png in Resources */,
+				AC17D4F41D7DEFFC0000F63E /* Meeting.png in Resources */,
 				AC1237581D116731000E24ED /* Main.storyboard in Resources */,
+				AC17D4F11D7DEED80000F63E /* Male.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
