@@ -50,7 +50,7 @@
     CLLocationCoordinate2D randomCoordinate = {0,0};
     
     do {
-        double latitude = ((double)(arc4random() % 201 / 400.0) - 0.25f + myCoordinate.latitude);
+        double latitude = ((double)(arc4random() % 201 / 400.0) + myCoordinate.latitude);
         double longitude = ((double)(arc4random() % 201 / 200.0) - 0.5f + myCoordinate.longitude);
         randomCoordinate = CLLocationCoordinate2DMake(latitude, longitude);
         
