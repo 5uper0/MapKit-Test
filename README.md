@@ -4,7 +4,7 @@
 
 CoreLocation, MapKit Framework
 
-// ENGLISH annotation
+// Annotation
 
 The app is done as iOS Beginner Course 37-38 lessons MapKit homework with 4 level of difficulty. So I made all the tasks programmatically and will introduce You what I have done overall.
 
@@ -32,7 +32,7 @@ The app is done as iOS Beginner Course 37-38 lessons MapKit homework with 4 leve
 
 12. Made '+' button by tapping which routes will be constructed from random users to the meeting point (as if they want to come to the meeting) and possibilities for them to come are different and depend on how far are they now from that point. If they are closer - 90%, if farther - 10%.
 
-// РУССКАЯ аннотация
+// Аннотация
 
 Приложение создано в качестве домашнего задания к iOS Beginner курсу по 37-38 урокам (MapKit) с 4 уровнями сложности. Я выполнил все условия данного задания и опишу, что у меня получилось.
 
