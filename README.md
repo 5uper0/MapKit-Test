@@ -1,5 +1,9 @@
 # MapKit-Test
 
+![Alt Text](https://github.com/5uper0/MapKit-Test/blob/master/Screenshots/MapKit-Test.gif)
+
+CoreLocation, MapKit Framework
+
 // ENGLISH annotation
 
 The app is done as iOS Beginner Course 37-38 lessons MapKit homework with 4 level of difficulty. So I made all the tasks programmatically and will introduce You what I have done overall.
@@ -54,4 +58,4 @@ The app is done as iOS Beginner Course 37-38 lessons MapKit homework with 4 leve
  
 11. В верхнем левом углу отображается View с количеством студентов попадающих в каждый из кругов. Суть такая, чем дальше пользователь находится, тем меньше вероятность что он придет на встречу. Расстояние от пользователя до места встречи рассчитывается используя функцию для расчета расстояния между точками из MapKit фреймворка.
  
-12. На Navigation Bar добавлена кнопка, по нажатию на которую, от случайных пользователей до нее прокладываются маршруты (как будто все стремятся на встречу), притом вероятности генератора разные и зависят от круга, в котором они находятся, если он близко, то 90%, а если далеко - то 10%
+12. На Navigation Bar добавлена кнопка, по нажатию на которую, от случайных пользователей до нее прокладываются маршруты (как будто все стремятся на встречу), притом вероятности генератора разные и зависят от круга, в котором они находятся, если он близко, то 90%, а если далеко - то 10%.
