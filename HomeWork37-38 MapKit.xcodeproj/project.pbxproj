@@ -21,6 +21,16 @@
 		AC17D4EF1D7DEED80000F63E /* Female.png in Resources */ = {isa = PBXBuildFile; fileRef = AC17D4E91D7DEED80000F63E /* Female.png */; };
 		AC17D4F11D7DEED80000F63E /* Male.png in Resources */ = {isa = PBXBuildFile; fileRef = AC17D4EB1D7DEED80000F63E /* Male.png */; };
 		AC17D4F41D7DEFFC0000F63E /* Meeting.png in Resources */ = {isa = PBXBuildFile; fileRef = AC17D4F31D7DEFFC0000F63E /* Meeting.png */; };
+		AC17D5001D7EAE720000F63E /* MapKit-Test.gif in Resources */ = {isa = PBXBuildFile; fileRef = AC17D4F61D7EAE720000F63E /* MapKit-Test.gif */; };
+		AC17D5011D7EAE720000F63E /* Simulator Screen Shot Sep 5, 2016, 22.55.23.png in Resources */ = {isa = PBXBuildFile; fileRef = AC17D4F71D7EAE720000F63E /* Simulator Screen Shot Sep 5, 2016, 22.55.23.png */; };
+		AC17D5021D7EAE720000F63E /* Simulator Screen Shot Sep 5, 2016, 22.55.39.png in Resources */ = {isa = PBXBuildFile; fileRef = AC17D4F81D7EAE720000F63E /* Simulator Screen Shot Sep 5, 2016, 22.55.39.png */; };
+		AC17D5031D7EAE720000F63E /* Simulator Screen Shot Sep 5, 2016, 22.57.43.png in Resources */ = {isa = PBXBuildFile; fileRef = AC17D4F91D7EAE720000F63E /* Simulator Screen Shot Sep 5, 2016, 22.57.43.png */; };
+		AC17D5041D7EAE720000F63E /* Simulator Screen Shot Sep 5, 2016, 22.58.17.png in Resources */ = {isa = PBXBuildFile; fileRef = AC17D4FA1D7EAE720000F63E /* Simulator Screen Shot Sep 5, 2016, 22.58.17.png */; };
+		AC17D5051D7EAE720000F63E /* Simulator Screen Shot Sep 5, 2016, 22.58.27.png in Resources */ = {isa = PBXBuildFile; fileRef = AC17D4FB1D7EAE720000F63E /* Simulator Screen Shot Sep 5, 2016, 22.58.27.png */; };
+		AC17D5061D7EAE720000F63E /* Simulator Screen Shot Sep 5, 2016, 22.58.54.png in Resources */ = {isa = PBXBuildFile; fileRef = AC17D4FC1D7EAE720000F63E /* Simulator Screen Shot Sep 5, 2016, 22.58.54.png */; };
+		AC17D5071D7EAE720000F63E /* Simulator Screen Shot Sep 5, 2016, 22.59.12.png in Resources */ = {isa = PBXBuildFile; fileRef = AC17D4FD1D7EAE720000F63E /* Simulator Screen Shot Sep 5, 2016, 22.59.12.png */; };
+		AC17D5081D7EAE720000F63E /* Simulator Screen Shot Sep 5, 2016, 22.59.37.png in Resources */ = {isa = PBXBuildFile; fileRef = AC17D4FE1D7EAE720000F63E /* Simulator Screen Shot Sep 5, 2016, 22.59.37.png */; };
+		AC17D5091D7EAE720000F63E /* Simulator Screen Shot Sep 5, 2016, 22.59.40.png in Resources */ = {isa = PBXBuildFile; fileRef = AC17D4FF1D7EAE720000F63E /* Simulator Screen Shot Sep 5, 2016, 22.59.40.png */; };
 		AC5EECDC1D12D910003E6325 /* UIView+MKAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5EECDB1D12D910003E6325 /* UIView+MKAnnotationView.m */; };
 		AC5EECE21D15725E003E6325 /* OVCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5EECE11D15725E003E6325 /* OVCircle.m */; };
 /* End PBXBuildFile section */
@@ -67,6 +77,16 @@
 		AC17D4E91D7DEED80000F63E /* Female.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Female.png; path = Images/Female.png; sourceTree = "<group>"; };
 		AC17D4EB1D7DEED80000F63E /* Male.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Male.png; path = Images/Male.png; sourceTree = "<group>"; };
 		AC17D4F31D7DEFFC0000F63E /* Meeting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Meeting.png; path = Images/Meeting.png; sourceTree = "<group>"; };
+		AC17D4F61D7EAE720000F63E /* MapKit-Test.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "MapKit-Test.gif"; sourceTree = "<group>"; };
+		AC17D4F71D7EAE720000F63E /* Simulator Screen Shot Sep 5, 2016, 22.55.23.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Simulator Screen Shot Sep 5, 2016, 22.55.23.png"; sourceTree = "<group>"; };
+		AC17D4F81D7EAE720000F63E /* Simulator Screen Shot Sep 5, 2016, 22.55.39.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Simulator Screen Shot Sep 5, 2016, 22.55.39.png"; sourceTree = "<group>"; };
+		AC17D4F91D7EAE720000F63E /* Simulator Screen Shot Sep 5, 2016, 22.57.43.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Simulator Screen Shot Sep 5, 2016, 22.57.43.png"; sourceTree = "<group>"; };
+		AC17D4FA1D7EAE720000F63E /* Simulator Screen Shot Sep 5, 2016, 22.58.17.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Simulator Screen Shot Sep 5, 2016, 22.58.17.png"; sourceTree = "<group>"; };
+		AC17D4FB1D7EAE720000F63E /* Simulator Screen Shot Sep 5, 2016, 22.58.27.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Simulator Screen Shot Sep 5, 2016, 22.58.27.png"; sourceTree = "<group>"; };
+		AC17D4FC1D7EAE720000F63E /* Simulator Screen Shot Sep 5, 2016, 22.58.54.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Simulator Screen Shot Sep 5, 2016, 22.58.54.png"; sourceTree = "<group>"; };
+		AC17D4FD1D7EAE720000F63E /* Simulator Screen Shot Sep 5, 2016, 22.59.12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Simulator Screen Shot Sep 5, 2016, 22.59.12.png"; sourceTree = "<group>"; };
+		AC17D4FE1D7EAE720000F63E /* Simulator Screen Shot Sep 5, 2016, 22.59.37.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Simulator Screen Shot Sep 5, 2016, 22.59.37.png"; sourceTree = "<group>"; };
+		AC17D4FF1D7EAE720000F63E /* Simulator Screen Shot Sep 5, 2016, 22.59.40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Simulator Screen Shot Sep 5, 2016, 22.59.40.png"; sourceTree = "<group>"; };
 		AC5EECDA1D12D910003E6325 /* UIView+MKAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MKAnnotationView.h"; sourceTree = "<group>"; };
 		AC5EECDB1D12D910003E6325 /* UIView+MKAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MKAnnotationView.m"; sourceTree = "<group>"; };
 		AC5EECE01D15725E003E6325 /* OVCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OVCircle.h; sourceTree = "<group>"; };
@@ -106,6 +126,7 @@
 				AC1237661D116731000E24ED /* HomeWork37-38 MapKitTests */,
 				AC1237711D116731000E24ED /* HomeWork37-38 MapKitUITests */,
 				AC12374B1D116731000E24ED /* Products */,
+				AC17D4F51D7EAE720000F63E /* Screenshots */,
 				AC1237801D1167F8000E24ED /* MapKit.framework */,
 			);
 			sourceTree = "<group>";
@@ -203,6 +224,23 @@
 				AC1237541D116731000E24ED /* ViewController.m */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		AC17D4F51D7EAE720000F63E /* Screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				AC17D4F61D7EAE720000F63E /* MapKit-Test.gif */,
+				AC17D4F71D7EAE720000F63E /* Simulator Screen Shot Sep 5, 2016, 22.55.23.png */,
+				AC17D4F81D7EAE720000F63E /* Simulator Screen Shot Sep 5, 2016, 22.55.39.png */,
+				AC17D4F91D7EAE720000F63E /* Simulator Screen Shot Sep 5, 2016, 22.57.43.png */,
+				AC17D4FA1D7EAE720000F63E /* Simulator Screen Shot Sep 5, 2016, 22.58.17.png */,
+				AC17D4FB1D7EAE720000F63E /* Simulator Screen Shot Sep 5, 2016, 22.58.27.png */,
+				AC17D4FC1D7EAE720000F63E /* Simulator Screen Shot Sep 5, 2016, 22.58.54.png */,
+				AC17D4FD1D7EAE720000F63E /* Simulator Screen Shot Sep 5, 2016, 22.59.12.png */,
+				AC17D4FE1D7EAE720000F63E /* Simulator Screen Shot Sep 5, 2016, 22.59.37.png */,
+				AC17D4FF1D7EAE720000F63E /* Simulator Screen Shot Sep 5, 2016, 22.59.40.png */,
+			);
+			path = Screenshots;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -311,12 +349,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC17D5091D7EAE720000F63E /* Simulator Screen Shot Sep 5, 2016, 22.59.40.png in Resources */,
 				AC12375D1D116731000E24ED /* LaunchScreen.storyboard in Resources */,
+				AC17D5071D7EAE720000F63E /* Simulator Screen Shot Sep 5, 2016, 22.59.12.png in Resources */,
 				AC12375A1D116731000E24ED /* Assets.xcassets in Resources */,
 				AC17D4EF1D7DEED80000F63E /* Female.png in Resources */,
 				AC17D4F41D7DEFFC0000F63E /* Meeting.png in Resources */,
+				AC17D5061D7EAE720000F63E /* Simulator Screen Shot Sep 5, 2016, 22.58.54.png in Resources */,
+				AC17D5001D7EAE720000F63E /* MapKit-Test.gif in Resources */,
+				AC17D5031D7EAE720000F63E /* Simulator Screen Shot Sep 5, 2016, 22.57.43.png in Resources */,
+				AC17D5011D7EAE720000F63E /* Simulator Screen Shot Sep 5, 2016, 22.55.23.png in Resources */,
+				AC17D5081D7EAE720000F63E /* Simulator Screen Shot Sep 5, 2016, 22.59.37.png in Resources */,
+				AC17D5041D7EAE720000F63E /* Simulator Screen Shot Sep 5, 2016, 22.58.17.png in Resources */,
+				AC17D5051D7EAE720000F63E /* Simulator Screen Shot Sep 5, 2016, 22.58.27.png in Resources */,
 				AC1237581D116731000E24ED /* Main.storyboard in Resources */,
 				AC17D4F11D7DEED80000F63E /* Male.png in Resources */,
+				AC17D5021D7EAE720000F63E /* Simulator Screen Shot Sep 5, 2016, 22.55.39.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
